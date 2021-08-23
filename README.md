@@ -6,6 +6,19 @@
 
 ### 参考 lib/redis
 
+### yarn test 运行测试，需要配置 redis 环境变量，在根目录下新增.env 文件
+
+```txt
+
+ENV=test
+DEV=true
+REDIS_CONFIG_HOST="127.0.0.1"
+REDIS_CONFIG_PORT=6379
+REDIS_CONFIG_PASSWORD="xxxxx"
+REDIS_CONFIG_DB=13
+
+```
+
 ## test
 
 ### test code
