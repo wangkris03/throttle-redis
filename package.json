@@ -1,0 +1,36 @@
+{
+  "name": "throttle-redis",
+  "version": "0.0.3",
+  "author": "kris",
+  "main": "cjs/index.js",
+  "types": "lib/index.ts",
+  "module": "./es/index.js",
+  "exports": {
+    ".": "./lib/index.ts"
+  },
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "es": "esbuild lib/index.ts --bundle --outdir=cjs --sourcemap --target=es6 --platform=node",
+    "test": "bike lib --test -w"
+  },
+  "dependencies": {
+    "nanoid": "^3.1.25"
+  },
+  "devDependencies": {
+    "@types/node": "^16.4.3",
+    "@types/redis": "2.8.28",
+    "bike": "^0.8.11",
+    "dotenv-cache": "^0.0.5",
+    "redis": "3.0.2",
+    "vite": "^2.0.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangkris03/throttle-redis.git"
+  },
+  "bugs": {
+    "url": "git+https://github.com/wangkris03/throttle-redis.git"
+  },
+  "homepage": "git+https://github.com/wangkris03/throttle-redis.git"
+}
