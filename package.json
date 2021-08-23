@@ -1,13 +1,11 @@
 {
   "name": "throttle-redis",
-  "version": "0.0.4",
+  "version": "0.0.11",
   "author": "kris",
   "main": "cjs/index.js",
   "types": "lib/index.ts",
-  "module": "./es/index.js",
-  "exports": {
-    ".": "./lib/index.ts"
-  },
+  "module": "lib/index.ts",
+  
   "license": "MIT",
   "private": false,
   "scripts": {
