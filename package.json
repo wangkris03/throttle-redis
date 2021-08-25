@@ -1,6 +1,6 @@
 {
   "name": "throttle-redis",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "author": "kris",
   "main": "cjs/index.js",
   "types": "lib/index.ts",

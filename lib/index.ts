@@ -34,7 +34,7 @@ export const throttleUrl = async ({
   const urlKey = getRdsKey(url);
 
   let count = await redisConfig.incr(urlKey);
-  redisConfig.expire(urlKey, 60);
+  redisConfig.expire(urlKey, 120);
 
   // console.log("count1", count);
 
@@ -58,7 +58,9 @@ export const throttleUrl = async ({
     if (box.has(id)) {
       box.delete(id);
       const afterRemoveCount = await redisConfig.decr(urlKey);
-
+      if (afterRemoveCount != 0) {
+        redisConfig.expire(urlKey, 120);
+      }
       //   console.log("removeId count", afterRemoveCount);
     }
   };
